@@ -1,0 +1,18 @@
+# Ignorar el archivo de configuración de la base de datos
+db.php
+
+# Ignorar archivos de configuración de entorno
+env
+
+# Ignorar dependencias
+node_modules/
+vendor/
+
+
+# Ignorar archivos temporales
+temp/
+cache/
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db

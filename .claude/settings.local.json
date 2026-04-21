@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /c/xampp/htdocs/centrodeformacion61-main/admin/includes)",
+      "Bash(mkdir -p /c/xampp/htdocs/centrodeformacion61-main/admin/css)",
+      "Bash(php -l admin/includes/auth_check.php)",
+      "Bash(php -l admin/includes/header.php)",
+      "Bash(php -l admin/includes/footer.php)",
+      "Bash(php -l admin/css/admin.css)",
+      "Bash(php -l admin/admin.php)",
+      "Bash(php -r \"echo extension_loaded\\('fileinfo'\\) ? 'fileinfo: OK' : 'fileinfo: NO CARGADA'; echo PHP_EOL; echo 'PHP version: ' . PHP_VERSION . PHP_EOL;\")",
+      "Bash(php -l admin/procesar_agregar_curso.php)",
+      "Bash(php -l admin/procesar_editar_curso.php)",
+      "Bash(find /c/xampp/htdocs/centrodeformacion61-main -name \"*.php\" -type f -exec grep -l \"login\\\\|acceso\" {} \\\\;)",
+      "Bash(php -r \"var_dump\\(password_verify\\('admin123', '\\\\$2y\\\\$10\\\\$0eb0.2mYvnt5y59hLqL2UOkT12F8e5P5z2b3I3c2o1tI0g9R2P8uG'\\)\\);\")",
+      "Bash(php -r \"echo password_hash\\('admin123', PASSWORD_BCRYPT\\);\")"
+    ]
+  }
+}

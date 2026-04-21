@@ -1,0 +1,344 @@
+/* ===== Variables de paleta CFP 61 ===== */
+:root {
+    --brand-dark:  #152372;
+    --brand-light: #cde3ef;
+    --brand-white: #ffffff;
+}
+
+/* ===== Reset y base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--brand-light);
+    color: var(--brand-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===== Navbar (idéntico a glass-nav del index.php) ===== */
+.glass-nav {
+    background-color: var(--brand-light);
+    border-bottom: 1px solid #aecade;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    color: var(--brand-dark) !important;
+    font-weight: 600;
+    transition: color 0.2s, text-decoration 0.2s;
+}
+
+.nav-link:hover {
+    color: #0056b3 !important;
+    text-decoration: underline;
+}
+
+.nav-link.active {
+    color: var(--brand-dark) !important;
+    border-bottom: 2px solid var(--brand-dark);
+}
+
+/* ===== Contenedor principal ===== */
+.admin-wrapper {
+    flex: 1;
+    padding: 2rem 1.5rem;
+}
+
+/* ===== Encabezado de página ===== */
+.admin-page-header {
+    background-color: var(--brand-dark);
+    color: var(--brand-light);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.admin-page-header h2,
+.admin-page-header h3 {
+    margin: 0;
+    font-weight: 700;
+}
+
+/* ===== Tarjeta de contenido ===== */
+.admin-card {
+    background-color: var(--brand-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-card .card-section-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--brand-dark);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--brand-light);
+}
+
+/* ===== Tabla de administración ===== */
+.admin-table {
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.admin-table thead tr {
+    background-color: var(--brand-dark);
+    color: var(--brand-light);
+}
+
+.admin-table thead th {
+    font-weight: 600;
+    padding: 0.85rem 1rem;
+    border: none;
+    white-space: nowrap;
+}
+
+.admin-table tbody tr {
+    transition: background-color 0.15s;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #eaf4fb;
+}
+
+.admin-table tbody td {
+    padding: 0.75rem 1rem;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+}
+
+/* ===== Botones de la marca ===== */
+.btn-admin-primary {
+    background-color: var(--brand-dark);
+    color: var(--brand-light);
+    border: 2px solid var(--brand-dark);
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 0.45rem 1.1rem;
+    transition: all 0.25s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-admin-primary:hover,
+.btn-admin-primary:focus {
+    background-color: var(--brand-light);
+    color: var(--brand-dark);
+    border-color: var(--brand-dark);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-admin-secondary {
+    background-color: var(--brand-light);
+    color: var(--brand-dark);
+    border: 2px solid var(--brand-dark);
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 0.45rem 1.1rem;
+    transition: all 0.25s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-admin-secondary:hover,
+.btn-admin-secondary:focus {
+    background-color: var(--brand-dark);
+    color: var(--brand-light);
+}
+
+.btn-admin-logout {
+    background-color: transparent;
+    color: var(--brand-dark);
+    border: 2px solid var(--brand-dark);
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 0.35rem 1rem;
+    transition: all 0.25s;
+    text-decoration: none;
+}
+
+.btn-admin-logout:hover,
+.btn-admin-logout:focus {
+    background-color: var(--brand-dark);
+    color: var(--brand-light);
+}
+
+/* ===== Formularios ===== */
+.form-label {
+    font-weight: 600;
+    color: var(--brand-dark);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--brand-dark);
+    box-shadow: 0 0 0 0.2rem rgba(21, 35, 114, 0.2);
+}
+
+/* ===== Offcanvas con estilo de marca ===== */
+.offcanvas-header.brand-header {
+    background-color: var(--brand-dark);
+    color: var(--brand-light);
+}
+
+/* ===== Badges de estado ===== */
+.badge-open {
+    background-color: #198754;
+    color: white;
+    padding: 0.35em 0.65em;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge-closed {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.35em 0.65em;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* ===== Vista previa de imagen ===== */
+.img-preview {
+    max-width: 180px;
+    border-radius: 8px;
+    border: 2px solid var(--brand-light);
+    margin-top: 0.5rem;
+}
+
+/* ===== Alertas con marca ===== */
+.alert-brand {
+    background-color: #eaf4fb;
+    border: 1px solid var(--brand-dark);
+    color: var(--brand-dark);
+    border-radius: 8px;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--brand-dark);
+    color: white;
+    padding: 1.5rem 0 0.5rem;
+    margin-top: auto;
+}
+
+footer a {
+    color: #aecade;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* ===== Sección de acciones rápidas en la tabla ===== */
+.table-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+}
+
+.table-actions form {
+    margin: 0;
+}
+
+/* ===== Navbar colapsado en móvil (< 992px = breakpoint lg) ===== */
+@media (max-width: 991.98px) {
+
+    /* Fondo y separación del menú cuando se despliega */
+    .navbar-collapse.show,
+    .navbar-collapse.collapsing {
+        background-color: var(--brand-light);
+        border-top: 1px solid #aecade;
+        padding: 0.5rem 0 0.75rem;
+        margin-top: 0.5rem;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Links del menú con más separación y separador visual */
+    .navbar-collapse .nav-item .nav-link {
+        padding: 0.65rem 1.25rem !important;
+        border-bottom: 1px solid rgba(174, 202, 222, 0.5);
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-collapse .nav-item:last-child .nav-link {
+        border-bottom: none;
+    }
+
+    /* Sección "Administrador / Cerrar Sesión" en móvil */
+    .navbar-collapse .d-flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 0.5rem !important;
+        padding: 0.75rem 1.25rem 0.25rem;
+        margin-top: 0.25rem;
+        border-top: 2px solid #aecade;
+        width: 100%;
+    }
+
+    .navbar-collapse .btn-admin-logout {
+        width: 100%;
+        text-align: center;
+        display: block;
+        padding: 0.5rem 1rem;
+    }
+
+    /* Reducir el logo un poco en pantallas pequeñas */
+    .navbar-brand img {
+        width: 170px !important;
+    }
+}
+
+/* ===== Responsive general ===== */
+@media (max-width: 768px) {
+    .admin-wrapper {
+        padding: 1rem 0.75rem;
+    }
+
+    .admin-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-table thead th,
+    .admin-table tbody td {
+        padding: 0.6rem 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .admin-card {
+        padding: 1rem;
+    }
+
+    /* Logo aún más pequeño en teléfonos muy pequeños */
+    .navbar-brand img {
+        width: 140px !important;
+    }
+}

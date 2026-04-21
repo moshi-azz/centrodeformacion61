@@ -1,0 +1,683 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat ;
+}
+
+
+.montserrat {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #cde3ef; /* Fondo original respetado */
+    color: #152372; 
+}
+.news-section {
+    background-color: #f0f8ff; /* Fondo claro */
+    border: 2px solid #007bff; /* Borde azul */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px 0; /* Margen superior e inferior */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.2s; /* Transición suave */
+}
+
+.news-section:hover {
+    transform: scale(1.02); /* Efecto de aumentar al pasar el mouse */
+}
+
+.news-title {
+    font-size: 2rem; /* Tamaño de texto grande */
+    color: #152372; /* Color del título */
+    margin-bottom: 10px; /* Espaciado inferior */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra de texto */
+}
+
+.news-description {
+    font-size: 1.2rem; /* Tamaño de texto para la descripción */
+    color: #31708f; /* Color de la descripción */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+.news-date {
+    font-size: 1rem; /* Tamaño de texto para la fecha */
+    color: #555; /* Color gris para la fecha */
+}
+
+.date-time {
+    font-weight: bold; /* Negrita para la fecha y hora */
+    color: #007bff; /* Color azul */
+}
+
+.countdown-timer {
+    font-size: 1.5rem; /* Tamaño de texto para el contador */
+    color: #28a745; /* Color verde para el contador */
+    margin-top: 10px; /* Espaciado superior */
+    font-weight: bold; /* Negrita */
+}
+/* Responsividad */
+@media (max-width: 768px) {
+    .news-section {
+        padding: 15px; /* Menos espaciado interno en pantallas pequeñas */
+    }
+
+    .news-title {
+        font-size: 1.5rem; /* Tamaño de texto más pequeño para el título */
+    }
+
+    .news-description {
+        font-size: 1rem; /* Tamaño de texto más pequeño para la descripción */
+    }
+
+    .news-date {
+        font-size: 0.9rem; /* Tamaño de texto más pequeño para la fecha */
+    }
+
+    .countdown-timer {
+        font-size: 1.2rem; /* Tamaño de texto más pequeño para el contador */
+    }
+}
+
+@media (max-width: 576px) {
+    .news-section {
+        padding: 10px; /* Menos espaciado interno en pantallas muy pequeñas */
+    }
+
+    .news-title {
+        font-size: 1.2rem; /* Tamaño de texto aún más pequeño para el título */
+    }
+
+    .news-description {
+        font-size: 0.9rem; /* Tamaño de texto aún más pequeño para la descripción */
+    }
+
+    .news-date {
+        font-size: 0.8rem; /* Tamaño de texto aún más pequeño para la fecha */
+    }
+
+    .countdown-timer {
+        font-size: 1rem; /* Tamaño de texto aún más pequeño para el contador */
+    }
+}
+/* Encabezado (Navbar) */
+.glass-nav {
+    background-color: #cde3ef;
+    border-bottom: 1px solid #aecade;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+    width: 280px;
+    margin-top: -30px;
+    margin-bottom: -30px;
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-link {
+    color: #152372 !important; /* Color de la marca */
+    font-weight: 600;
+    transition: color 0.2s, text-decoration 0.2s;
+}
+
+.nav-link:hover {
+    color: #007bff !important;
+    text-decoration: underline;
+}
+
+/* Menú colapsado en móvil (< 992px) */
+@media (max-width: 991.98px) {
+    .navbar-collapse.show,
+    .navbar-collapse.collapsing {
+        background-color: #cde3ef;
+        border-top: 1px solid #aecade;
+        padding: 0.5rem 0 0.75rem;
+        margin-top: 0.5rem;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .navbar-collapse .nav-item .nav-link {
+        padding: 0.65rem 1.25rem !important;
+        border-bottom: 1px solid rgba(174, 202, 222, 0.5);
+    }
+
+    .navbar-collapse .nav-item:last-child .nav-link {
+        border-bottom: none;
+    }
+
+    /* Íconos sociales en móvil */
+    .navbar-collapse .social-icons {
+        padding: 0.75rem 1.25rem 0;
+        border-top: 2px solid #aecade;
+        width: 100%;
+        justify-content: flex-start !important;
+    }
+
+    /* Logo reducido en móvil */
+    .navbar-brand img {
+        width: 180px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand img {
+        width: 150px !important;
+    }
+}
+/* Estilo para los íconos de redes sociales en la barra de navegación */
+.navbar .social-icons {
+    position: relative; 
+    display: flex;
+    
+    gap: 10px;
+    flex-direction: row;
+    
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: scale(1.2); 
+        transform: rotate(10deg);
+    }
+    75%{
+        transform: scale(1.2);
+        transform: rotate(-10deg);
+
+    }
+    100% {
+        transform: scale(1);
+        transform: rotate(0deg);
+    }
+}
+
+.social-icons a{
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+    animation: pulse 2s infinite ;
+}
+
+.bi:hover {
+    transform: scale(1.2); /* Escalar el ícono al pasar el mouse */
+    color: #1b0ab6; /* Cambia el color del ícono al pasar el mouse */
+    text-shadow: 0 0 10px rgba(1, 102, 255, 0.7); /* Sombra de texto para un efecto adicional */
+}
+
+
+
+
+.container-hero {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../IMG/CE (1080 x 3000 px) (Pizarrón).png"); 
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 40px;
+}
+
+.bg-contrast {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+/* Banner de Bienvenida */
+.hero {
+    z-index: 10;
+    height: 400px; /* Altura del banner */
+    display: flex;
+    align-items: center;
+    color: #ffffff;;
+    text-align: center;
+    position: absolute;
+    text-shadow: #0056b3;
+}
+
+
+
+.hero h1 {
+    color: #ffffff;;
+    font-weight:bolder;
+    font-size: 2.5rem; /* Tamaño de texto */
+    font-weight: bold;
+    animation: slideIn 0.5s ease-in; /* Animación de entrada */
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.slogan{
+    font-size: xx-large;
+    text-align: center;
+    text-wrap: 2;
+    margin-top: 20px;
+
+}
+/* Sección de Cursos (Tarjetas originales mejoradas) */
+.card {
+    border: none;
+    background-color: #152372;
+    color: #cde3ef;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.2s;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: none;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #cde3ef;
+    color: #152372;
+    border: 1px solid #cde3ef;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #152372;
+    color: #cde3ef;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Formulario de Inscripción */
+.form-control {
+    border: 1px solid #ced4da; /* Borde fino */
+    transition: border-color 0.2s; /* Transición suave */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Color de acento al foco */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra al foco */
+}
+
+.btn-submit {
+    background-color: #28a745; /* Color de acento */
+    border-radius: 0.25rem; /* Bordes redondeados */
+}
+
+.btn-submit:hover {
+    background-color: #218838; /* Color más claro al hacer hover */
+    transform: scale(0.98); /* Efecto de presión */
+}
+
+/* Página de Administración */
+.table {
+    margin-top: 20px; /* Espacio superior */
+}
+
+.btn-success {
+    background-color: #28a745; /* Color verde */
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Color amarillo */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Color rojo */
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Color más claro al hacer hover */
+}
+
+.btn-warning:hover {
+    background-color: #e0a800; /* Color más claro al hacer hover */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Color más claro al hacer hover */
+}
+
+/* Sección "Sobre Nosotros" */
+.about {
+    text-align: center; /* Texto centrado */
+    padding: 20px; /* Espaciado */
+}
+
+.about img {
+    max-width: 100%; /* Ajustar imagen al contenedor */
+    border-radius: 0.5rem; /* Bordes redondeados */
+}
+
+/* Sección de Contacto */
+.contact-form {
+    margin-top: 20px; /* Espacio superior */
+}
+
+.contact-form .form-control {
+    margin-bottom: 15px; /* Espacio entre campos */
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+   
+
+    .hero h1 {
+        font-size: 1.8rem; /* Tamaño de texto más pequeño */
+    }
+
+    .card {
+        margin-bottom: 20px; /* Espacio entre tarjetas */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.5rem; /* Tamaño de texto aún más pequeño */
+    }
+
+    .nav-link {
+        font-size: 0.9rem; /* Tamaño de enlace más pequeño */
+    }
+} 
+/* Estilos adicionales para mejorar la experiencia */
+.btn {
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 0.25rem; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+}
+
+/* Efecto de sombra en botones */
+.btn:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
+}
+
+/* Estilos para iconos */
+.icon {
+    width: 20px; /* Tamaño de iconos */
+    height: 20px; /* Tamaño de iconos */
+    margin-right: 5px; /* Espacio entre icono y texto */
+}
+
+/* Estilos para enlaces de redes sociales */
+.social-links a {
+    color: #007bff; /* Color de enlace */
+    margin: 0 10px; /* Espacio entre enlaces */
+    transition: color 0.2s; /* Transición suave */
+}
+
+.social-links a:hover {
+    color: #0056b3; /* Color al hacer hover */
+}
+
+/* Estilos para el pie de página */
+footer {
+    margin-top: 100px ;
+    background-color:#152372; /* Fondo oscuro */
+    color: white; /* Color de texto */
+    text-align: center; /* Texto centrado */
+    padding: 20px 0; /* Espaciado */
+}
+
+/* Estilos para el pie de página en móviles */
+@media (max-width: 576px) {
+    footer {
+        font-size: 0.9rem; /* Tamaño de texto más pequeño */
+    }
+}
+
+/* Estilos para el pie de página en móviles */
+@media (max-width: 576px) {
+    footer {
+        font-size: 0.9rem; /* Tamaño de texto más pequeño */
+    }
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilos para las tarjetas en la sección de cursos */
+.card {
+    border-radius: 0.5rem; /* Bordes redondeados */
+    overflow: hidden; /* Ocultar desbordamiento */
+}
+
+/* Estilos para el encabezado de las tarjetas */
+.card-header {
+    background-color: #f1f1f1; /* Fondo claro */
+    padding: 10px; /* Espaciado interno */
+    font-weight: bold; /* Negrita */
+}
+
+/* Estilos para el pie de las tarjetas */
+.card-footer {
+    background-color: #f1f1f1; /* Fondo claro */
+    padding: 10px; /* Espaciado interno */
+}
+/* Estilo del offcanvas */
+
+.inscripcion-cerrada {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+/* Estilos para los botones de acción en la página de administración */
+.admin-btn {
+    margin: 5px; /* Espacio entre botones */
+}
+
+/* Estilos para los iconos en la sección "Sobre Nosotros" */
+.about-icons {
+    display: flex; /* Flexbox para alinear iconos */
+    justify-content: center; /* Centrar iconos */
+    margin-top: 10px; /* Espacio superior */
+}
+
+/* Estilos para los enlaces de contacto */
+.contact-links a {
+    color: #007bff; /* Color de enlace */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.2s; /* Transición suave */
+}
+
+.contact-links a:hover {
+    color: #0056b3; /* Color al hacer hover */
+}
+
+/* Estilos para el formulario de contacto */
+.contact-form {
+    background-color: #cde3ef; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Estilos para el contador de eventos */
+.timer-box {
+    background: #152372;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.timer-num {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.timer-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* Estilos para los mensajes de error en el formulario */
+.error-message {
+    color: #dc3545; /* Color rojo para errores */
+    font-size: 0.9rem; /* Tamaño de texto */
+    margin-top: 5px; /* Espacio superior */
+}
+
+/* Estilos para los mensajes de éxito en el formulario */
+.success-message {
+    color: #28a745; /* Color verde para éxito */
+    font-size: 0.9rem; /* Tamaño de texto */
+    margin-top: 5px; /* Espacio superior */
+}
+
+/* ===== Dropdown menú Administración ===== */
+.dropdown-menu {
+    border: 1px solid #aecade;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0.4rem 0;
+    min-width: 200px;
+}
+
+.dropdown-item {
+    color: #152372;
+    font-weight: 600;
+    padding: 0.5rem 1.1rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #cde3ef;
+    color: #152372;
+}
+
+.dropdown-divider {
+    border-color: #aecade;
+}
+
+/* Botón toggle del dropdown con mismo color que el resto */
+.nav-link.dropdown-toggle {
+    color: #152372 !important;
+}
+
+.nav-link.dropdown-toggle::after {
+    border-top-color: #152372;
+}
+
+/* ===== Scroll suave global ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== Navbar encogida al hacer scroll ===== */
+.glass-nav.scrolled {
+    background-color: rgba(205, 227, 239, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 6px 20px rgba(21, 35, 114, 0.18);
+    border-bottom: 1px solid rgba(174, 202, 222, 0.8);
+}
+
+.glass-nav.scrolled .navbar-brand img {
+    width: 200px !important;
+    transition: width 0.35s ease;
+}
+
+/* ===== Indicador de scroll (flecha en el hero) ===== */
+.scroll-indicator {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.88;
+    animation: bounce 2s infinite ease-in-out;
+    transition: opacity 0.2s;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+    color: #cde3ef;
+}
+
+.scroll-indicator .bi {
+    font-size: 1.5rem;
+    display: block;
+}
+
+.scroll-indicator-text {
+    display: block;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    45% {
+        transform: translateX(-50%) translateY(10px);
+    }
+    65% {
+        transform: translateX(-50%) translateY(4px);
+    }
+}

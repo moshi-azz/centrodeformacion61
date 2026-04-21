@@ -1,0 +1,22 @@
+Options -Indexes
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Redirigir .php a url sin extension (excepto procesadores POST si prefieres, 
+    # pero aquí forzamos GET y POST se mantienen manejados porque los action=" script sin .php "
+    # funcionaran directamente)
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+    RewriteRule ^ %1 [R=301,L]
+
+    # Resolver las URLs transparentes a su archivo php
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.php -f
+    RewriteRule ^(.*)$ $1.php [L]
+</IfModule>
+
+<IfModule mod_php.c>
+    php_flag display_errors Off
+    php_value error_reporting 0
+</IfModule>
