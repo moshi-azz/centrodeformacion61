@@ -127,8 +127,10 @@ if ($stmt_abiertos) {
     <!-- AOS – Animate On Scroll -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <title>Centro de Formación Profesional N° 61 | La Criolla, Entre Ríos</title>
-    <meta name="description" content="Centro de Formación Profesional N° 61 en La Criolla, Concordia, Entre Ríos. Ofrecemos trayectos en informática, gastronomía, soldadura, electricidad, cosmetología y más. Inscripciones abiertas.">
-    <meta name="keywords" content="centro de formación profesional, CFP 61, La Criolla, Concordia, Entre Ríos, cursos técnicos, trayectos formativos, inscripciones, educación técnica">
+    <meta name="description"
+        content="Centro de Formación Profesional N° 61 en La Criolla, Concordia, Entre Ríos. Ofrecemos trayectos en informática, gastronomía, soldadura, electricidad, cosmetología y más. Inscripciones abiertas.">
+    <meta name="keywords"
+        content="centro de formación profesional, CFP 61, La Criolla, Concordia, Entre Ríos, cursos técnicos, trayectos formativos, inscripciones, educación técnica">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="http://cfp61.edu.ar/">
 
@@ -136,8 +138,9 @@ if ($stmt_abiertos) {
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://cfp61.edu.ar/">
     <meta property="og:title" content="Centro de Formación Profesional N° 61 | La Criolla">
-    <meta property="og:description" content="Formación profesional y capacitación laboral en La Criolla, Entre Ríos. Cursos en informática, gastronomía, soldadura, electricidad y más.">
-    <meta property="og:image" content="http://cfp61.edu.ar/IMG/lococfp61.png">
+    <meta property="og:description"
+        content="Formación profesional y capacitación laboral en La Criolla, Entre Ríos. Cursos en informática, gastronomía, soldadura, electricidad y más.">
+    <meta property="og:image" content="http://cfp61.edu.ar/public/IMG/lococfp61.png">
     <meta property="og:locale" content="es_AR">
     <meta property="og:site_name" content="CFP 61 La Criolla">
 
@@ -145,7 +148,7 @@ if ($stmt_abiertos) {
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Centro de Formación Profesional N° 61 | La Criolla">
     <meta name="twitter:description" content="Formación profesional y capacitación laboral en La Criolla, Entre Ríos.">
-    <meta name="twitter:image" content="http://cfp61.edu.ar/IMG/lococfp61.png">
+    <meta name="twitter:image" content="http://cfp61.edu.ar/public/IMG/lococfp61.png">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -155,7 +158,7 @@ if ($stmt_abiertos) {
       "name": "Centro de Formación Profesional N° 61",
       "alternateName": "CFP 61",
       "url": "http://cfp61.edu.ar/",
-      "logo": "http://cfp61.edu.ar/IMG/lococfp61.png",
+      "logo": "http://cfp61.edu.ar/public/IMG/lococfp61.png",
       "description": "Institución educativa que brinda trayectos de formación profesional y capacitación laboral para una rápida inserción en el mercado socioproductivo local y regional.",
       "foundingDate": "2014",
       "address": {
@@ -185,8 +188,83 @@ if ($stmt_abiertos) {
 </head>
 
 <body>
-    <header>
+    <nav class="navbar navbar-expand-lg navbar-light glass-nav">
+        <div id="navPill"></div>
+        <div class="container-fluid">
+            <a class="navbar-brand p-0" href="#">
+                <img src="./IMG/lococfp61.png" alt="Logo CFP 61"
+                    style="width:280px; margin-bottom:-30px; margin-top:-30px; max-width:100%; height:auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#" id="nav-inicio">
+                            <i class="bi bi-house-fill me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#trayectos" id="nav-trayectos">
+                            <i class="bi bi-journal-bookmark-fill me-1"></i>Trayectos Formativos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#nosotros" id="nav-nosotros">
+                            <i class="bi bi-people-fill me-1"></i>Sobre Nosotros
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#footer" id="nav-contacto">
+                            <i class="bi bi-envelope-fill me-1"></i>Contacto
+                        </a>
+                    </li>
+                    <?php if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']): ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-shield-lock-fill me-1"></i>Administración
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="../admin/admin">
+                                        <i class="bi bi-grid-fill me-2"></i>Ver Cursos
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../admin/agregar_curso">
+                                        <i class="bi bi-plus-circle-fill me-2"></i>Agregar Curso
+                                    </a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="../admin/cerrar_sesion">
+                                        <i class="bi bi-box-arrow-right me-2"></i>Cerrar Sesión
+                                    </a></li>
+                            </ul>
+                        </li>
+                    <?php endif; ?>
+                </ul>
+                <div class="social-icons d-flex align-items-center justify-content-center mt-3 mt-lg-0 gap-2">
+                    <a href="https://www.instagram.com/cfplacriolla2?igsh=MW5hemlyNmpiNzRzcA==" target="_blank"
+                        class="social-link" style="color: #152372;">
+                        <i class="bi bi-instagram fs-2 px-1"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/15S7oEsPhe/?mibextid=LQQJ4d" target="_blank"
+                        class="social-link" style="color: #152372;">
+                        <i class="bi bi-facebook fs-2 px-1"></i>
+                    </a>
+                    <button type="button" class="btn btn-sm fw-bold rounded-pill ms-2" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasInscripcion" aria-controls="offcanvasInscripcion"
+                        style="background-color:#152372; color:#cde3ef; border:none; white-space:nowrap;">
+                        <i class="bi bi-telephone-fill me-1"></i>Quiero anotarme
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
         <?php if ($evento): ?>
             <div class="alert alert-info text-center news-section" id="evento"
                 data-fecha="<?php echo htmlspecialchars($evento['fecha_hora']); ?>">
@@ -196,82 +274,7 @@ if ($stmt_abiertos) {
                         class="date-time"><?php echo htmlspecialchars($evento['fecha_hora']); ?></span></p>
                 <div id="contador" class="countdown-timer"></div>
             </div>
-        <?php endif;
-        ?>
-        <nav class="navbar navbar-expand-lg navbar-light glass-nav">
-            <div class="container-fluid">
-                <a class="navbar-brand p-0" href="#">
-                    <img src="./IMG/lococfp61.png" alt="Logo CFP 61"
-                        style="width:280px; margin-bottom:-30px; margin-top:-30px; max-width:100%; height:auto;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#">
-                                <i class="bi bi-house-fill me-1"></i>Inicio
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#trayectos">
-                                <i class="bi bi-journal-bookmark-fill me-1"></i>Trayectos Formativos
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#nosotros">
-                                <i class="bi bi-people-fill me-1"></i>Sobre Nosotros
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#footer">
-                                <i class="bi bi-envelope-fill me-1"></i>Contacto
-                            </a>
-                        </li>
-                        <?php if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']): ?>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-shield-lock-fill me-1"></i>Administración
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="../admin/admin">
-                                            <i class="bi bi-grid-fill me-2"></i>Ver Cursos
-                                        </a></li>
-                                    <li><a class="dropdown-item" href="../admin/agregar_curso">
-                                            <i class="bi bi-plus-circle-fill me-2"></i>Agregar Curso
-                                        </a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="../admin/cerrar_sesion">
-                                            <i class="bi bi-box-arrow-right me-2"></i>Cerrar Sesión
-                                        </a></li>
-                                </ul>
-                            </li>
-                        <?php endif; ?>
-                    </ul>
-                    <div class="social-icons d-flex align-items-center justify-content-center mt-3 mt-lg-0 gap-2">
-                        <a href="https://www.instagram.com/cfplacriolla2?igsh=MW5hemlyNmpiNzRzcA==" target="_blank"
-                            class="social-link" style="color: #152372;">
-                            <i class="bi bi-instagram fs-2 px-1"></i>
-                        </a>
-                        <a href="https://www.facebook.com/share/15S7oEsPhe/?mibextid=LQQJ4d" target="_blank"
-                            class="social-link" style="color: #152372;">
-                            <i class="bi bi-facebook fs-2 px-1"></i>
-                        </a>
-                        <button type="button" class="btn btn-sm fw-bold rounded-pill ms-2" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasInscripcion" aria-controls="offcanvasInscripcion"
-                            style="background-color:#152372; color:#cde3ef; border:none; white-space:nowrap;">
-                            <i class="bi bi-telephone-fill me-1"></i>Quiero anotarme
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <?php endif; ?>
     </header>
 
     <main class="container">
@@ -312,29 +315,22 @@ if ($stmt_abiertos) {
                     // Delay en cascada según columna (0 → 0ms, 1 → 150ms, 2 → 300ms)
                     $aosDelay = ($cardIndex % 3) * 150;
 
+                    $cerradas_bool = $curso['inscripciones_cerradas'] ? 'true' : 'false';
+                    $fecha_ap = htmlspecialchars($curso['fecha_apertura'] ?? '');
                     echo '<div class="col-md-4 mb-4 curso-card-container" data-aos="fade-up" data-aos-delay="' . $aosDelay . '">';
                     echo '<div class="card h-100 ' . $inscripciones_cerradas . '">';
                     echo '<img src="' . $foto . '" alt="' . htmlspecialchars($curso['titulo']) . '" class="card-img-top">';
                     echo '<div class="card-body d-flex flex-column">';
                     echo '<h3 class="card-title h5">' . htmlspecialchars($curso['titulo']) . '</h3>';
-                    echo '<p class="card-text">' . htmlspecialchars($curso['descripcion']) . '</p>';
-
-                    if ($curso['inscripciones_cerradas']) {
-                        echo '<div class="mt-auto">';
-                        echo '<div class="inscripcion-cerrada">Inscripciones cerradas</div>';
-                        echo '<p>Fecha de apertura: ' . htmlspecialchars($curso['fecha_apertura']) . '</p>';
-                        echo '</div>';
-                    } else {
-                        echo '<button type="button"
-                            class="btn btn-primary mt-auto btn-inscribirse-card"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasInscripcion"
-                            aria-controls="offcanvasInscripcion"
-                            data-curso-id="' . htmlspecialchars($curso['id']) . '">
-                            <i class="bi bi-telephone-fill me-1"></i>Quiero anotarme
-                        </button>';
-                    }
-
+                    echo '<button class="btn btn-outline-primary btn-sm mt-auto btn-ver-curso" type="button"
+                        data-titulo="' . htmlspecialchars($curso['titulo']) . '"
+                        data-descripcion="' . htmlspecialchars($curso['descripcion']) . '"
+                        data-imagen="' . $foto . '"
+                        data-cursoid="' . (int)$curso['id'] . '"
+                        data-inscripciones-cerradas="' . $cerradas_bool . '"
+                        data-fecha-apertura="' . $fecha_ap . '">
+                        <i class="bi bi-eye me-1"></i>Ver trayecto
+                    </button>';
                     echo '</div>';
                     echo '</div>';
                     echo '</div>';
@@ -355,7 +351,7 @@ if ($stmt_abiertos) {
 
         <div class="row">
             <div class="col-sm" data-aos="fade-left" data-aos-delay="100">
-                <p style="text-align: center; font-size:x-large; ">El CENTRO FORMACIÓN PROFESIONAL N° 61
+                <p class="texto-institucional" style="text-align: center; font-size:x-large; ">El CENTRO FORMACIÓN PROFESIONAL N° 61
                     dependiente de la Dirección de Educación Técnico
                     Profesional del Consejo General de Educación funciona
                     en la Localidad de La Criolla desde el año 2014 y
@@ -380,7 +376,7 @@ if ($stmt_abiertos) {
         </div>
         <div class="row">
             <div class="col-sm" data-aos="fade-left" data-aos-delay="150">
-                <p style="text-align: center; font-size:x-large; ">Nuestra oferta busca preparar, actualizar y
+                <p class="texto-institucional" style="text-align: center; font-size:x-large; ">Nuestra oferta busca preparar, actualizar y
                     desarrollar
                     las capacidades de las personas para el mundo del
                     trabajo. Capacitamos en conocimientos específicos,
@@ -501,7 +497,8 @@ if ($stmt_abiertos) {
 
                 <!-- Columna 3: Redes sociales o enlace institucional -->
                 <div class="col-lg-4 col-md-12 col-12 mb-3">
-                    <h3 class="h5"><i class="bi bi-link fs-5"></i> Dirección de Educación Técnico Profesional del Consejo General de Educación</h3>
+                    <h3 class="h5"><i class="bi bi-link fs-5"></i> Dirección de Educación Técnico Profesional del
+                        Consejo General de Educación</h3>
                     <p>
                         <a href="https://cge.entrerios.gov.ar/tecnico-profesional/" class="text-light"
                             target="_blank">Consejo General de Educación</a>
@@ -522,6 +519,21 @@ if ($stmt_abiertos) {
             </a>
         </div>
     </footer>
+    <!-- ═══ MODAL CUSTOM: Detalle de Trayecto ═══ -->
+    <div class="curso-modal-overlay" id="cursoModalOverlay" role="dialog" aria-modal="true" aria-label="Detalle del trayecto">
+        <div class="curso-modal-card" id="cursoModalCard">
+            <button class="curso-modal-close" id="cursoModalClose" aria-label="Cerrar">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <img id="cursoModalImg" src="" alt="" class="curso-modal-img">
+            <div class="curso-modal-body">
+                <h2 class="curso-modal-titulo" id="cursoModalTitulo"></h2>
+                <p class="curso-modal-descripcion" id="cursoModalDesc"></p>
+                <div id="cursoModalInscripcionArea"></div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS – Animate On Scroll -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

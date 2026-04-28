@@ -127,10 +127,10 @@ $conn->close();
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://cfp61.edu.ar/inscripcion.php">
+    <meta property="og:url" content="http://cfp61.edu.ar/public/inscripcion.php">
     <meta property="og:title" content="Inscripción a Curso | CFP 61 La Criolla">
     <meta property="og:description" content="Inscribite a los cursos del Centro de Formación Profesional N° 61 en La Criolla, Entre Ríos.">
-    <meta property="og:image" content="http://cfp61.edu.ar/IMG/lococfp61.png">
+    <meta property="og:image" content="http://cfp61.edu.ar/public/IMG/lococfp61.png">
     <meta property="og:locale" content="es_AR">
     <meta property="og:site_name" content="CFP 61 La Criolla">
 </head>

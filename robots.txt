@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /validar.php
+
+Sitemap: http://cfp61.edu.ar/sitemap.xml
